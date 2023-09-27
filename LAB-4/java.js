@@ -1,21 +1,28 @@
+let slideIndex = 1;
+showSlides(slideIndex);
 
-const baseURL = 'https://assets.codepen.io/2538893/';
-const nxt = document.querySelector('.nxt');
-const slide = document.querySelector('.pic');
-const cars = ['car1.jpg', 'car2.jpg', 'car3.jpg', 'car4.jpg'];
-let index = 1;
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-nxt.onclick = function(e) {
-  e.preventDefault();
-  
-  slide.src = baseURL + cars[index];
-  index = index + 1;
-  console.log(index);
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-  //write a conditional so that the images wrap back to the beginning image.
-  if(index >= cars.length) {
-    index = 0;
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-};
-
-//Add a previous button event listener
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}

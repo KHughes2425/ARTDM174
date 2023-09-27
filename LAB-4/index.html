@@ -6,17 +6,50 @@
     <title>Photo Gallery</title>
 </head>
 <body>
-    <h1>Slides!</h1>
-    <p>I reccommend you to export this pen and use your own images.</p>
-        <div class="slides">
-         <figure>
-            <img class="pic" src="https://assets.codepen.io/2538893/car1.jpg" alt="">
-        </figure>
+    <div class="slideshow-container">
 
-    <a class="prev" href="">previous</a>
-    <a class="nxt" href="">next</a>
-  
-</div>
-    
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="images/2.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="images/10.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="images/1.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="images/8.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="images/9.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+    <script src="java.js"></script>
 </body>
 </html>
