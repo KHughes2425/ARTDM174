@@ -1,0 +1,23 @@
+.basic-box {
+    display: grid;
+    width: 50px;
+    height:50px;
+    background: #bac;
+    margin: 1rem;
+    place-items: center;
+  }
+  
+  .go-btn, .go-btn2 {
+    background: #8c9;
+    border-radius: 50%;
+  }
+  
+  .mover1 {
+    transition: all 1s ease-in-out;
+    transform: translateX(400px);
+  }
+  
+  .mover2 {
+    /* add your animation properties here */
+  }
+  
