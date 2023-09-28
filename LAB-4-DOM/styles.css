@@ -12,12 +12,12 @@
     border-radius: 50%;
   }
   
-  .mover1 {
+.mover1 {
     transition: all 1s ease-in-out;
     transform: translateX(400px);
   }
   
-  .mover2 {
+.mover2 {
     /* add your animation properties here */
   }
   
