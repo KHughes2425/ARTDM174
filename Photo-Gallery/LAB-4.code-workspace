@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "test",
+			"path": "../../ARTDM_/test"
+		},
+		{
+			"name": "LAB-4-1",
+			"path": "../../../Desktop/LAB-4-1"
+		}
+	],
+	"settings": {}
+}
