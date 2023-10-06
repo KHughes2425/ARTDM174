@@ -235,7 +235,7 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
   .mobile p{
     font-weight:bold;
     text-align:center;
-    font-size:2rem;
+    font-size:20px;
   }
   
   
