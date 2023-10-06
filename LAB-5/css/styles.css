@@ -156,6 +156,17 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
     border-radius: 10px;
     padding:10px;
   }
+
+  .sumbit{
+    max-width:50%;
+    min-width:50%;
+    margin: 0 auto;
+  }
+
+  .mobile p{
+    font-family: "Short Stack";
+    font-size:1rem;
+  }
   
   
   
@@ -169,7 +180,7 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
   
   .tablet-desktop p{
     font-weight:bold;
-    font-size:2rem;
+    font-size:1rem;
     text-align:center;
   }
   
