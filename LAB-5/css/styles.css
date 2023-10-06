@@ -32,8 +32,7 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
   /* Style rule for header */
   header {
     top: 0;
-    background: linear-gradient(180deg, #ff00a2, #a30092, #001ba3)
-  
+    background-color: #000b30;
   }
   
   
@@ -301,7 +300,7 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
     text-align:center;
     font-size:2rem;
     font-weight: 'Caveat Brush';
-    background: linear-gradient(180deg, #ff00a2, #a30092, #001ba3);
+    background-color: #7645d8;
     padding:10px;
     border-radius:60px;
   }
@@ -441,7 +440,7 @@ body {
   
     .mobile {
       display: block;
-      background-color: rgb(255, 219, 219);
+      background-color: rgb(229, 219, 255);
       padding:20px;
       border:5px solid black;
       border-radius: 50px;
@@ -489,8 +488,7 @@ body {
     header {
         display:flex;
         flex-direction: row;
-        background: linear-gradient(180deg, #ff00a2, #a30092, #001ba3);
-
+        background-color: #000b30;
     }
    
     header img{
@@ -551,7 +549,7 @@ body {
   
     .mobile {
       display: block;
-      background-color: rgb(255, 219, 219);
+      background-color: rgb(219, 220, 255);
       padding:20px;
       border:5px solid black;
       border-radius: 50px;
@@ -563,7 +561,7 @@ body {
   
   
     .tel-link {
-      background-color: #ffcaca;
+      background-color: #caceff;
       padding: 15px;
       margin: 0 auto;
       width: 80%;
@@ -661,7 +659,7 @@ body {
   
     .mobile {
       display: block;
-      background-color:#ffcaca;
+      background-color:#cacdff;
       padding:20px;
       border:5px solid black;
       border-radius: 50px;
@@ -673,7 +671,7 @@ body {
   
   
     .tel-link {
-      background-color: #ffcaca;
+      background-color: #cdcaff;
       padding: 15px;
       margin: 0 auto;
       width: 80%;
@@ -699,7 +697,7 @@ body {
     }
 
     #move{
-      background-color: #ff88ace2;
+      background-color: #8890ffe2;
       margin-top:-20.7rem;
       position:absolute;
       max-width: 30%;
@@ -718,7 +716,7 @@ body {
 
 @media screen and (min-width:1200px) {
       #move{
-        background-color: #ff88ace2;
+        background-color: #9088ffe2;
         margin-top:-23rem;
         position:absolute;
         max-width: 30%;
@@ -734,8 +732,8 @@ body {
         display:flex;
         flex-direction: row;
         margin: 0 auto;
-        background: linear-gradient(180deg, #ff00a2, #a30092, #001ba3)
-    }
+        background-color: #000b30;
+      }
 
     header img{
       max-width: 20%;
@@ -786,7 +784,7 @@ body {
   
     .mobile {
       display: block;
-      background-color:#ffcaca;
+      background-color:#ddcaff;
       padding:20px;
       border:5px solid black;
       border-radius: 50px;
@@ -798,7 +796,7 @@ body {
   
   
     .tel-link {
-      background-color: #ffcaca;
+      background-color: #d0caff;
       padding: 15px;
       margin: 0 auto;
       width: 80%;
