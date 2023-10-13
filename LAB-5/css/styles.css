@@ -333,6 +333,93 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
     font-size: 1.5em;
     font-weight: bold;
   }
+
+  .mySlides {
+    display: none;
+    border: 5px solid rgb(238, 0, 255);
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(255, 106, 0, 0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 40px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    background-color: #01070084;
+    font-family: 'Creepster', cursive;
+    font-weight:lighter;
+  
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ff6f00;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.9s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #00ff11;
+  }
+  
+  a{
+      color:rgb(0, 254, 0);
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
   
   /*CSS for Panda html image carasoul*/
   @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
@@ -351,78 +438,46 @@ body {
   font-weight: 400;
 }
 
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 500px;
-  gap: 10px;
+.container{
+  width:70%;
+  margin-inline:auto;
+}
 
-  > div {
-    flex: 0 0 120px;
-    border-radius: 0.5rem;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    box-shadow: 1px 5px 15px #1e0e3e;
-    position: relative;
-    overflow: hidden;
+.carousel_inner{
+  width:100%;
+  overflow: hidden;
+}
 
-    &:nth-of-type(1) {
-      background: url(/images/ellicia-IgdVdJCmzf4-unsplash.jpg)
-        no-repeat 50% / cover;
-    }
-    &:nth-of-type(2) {
-      background: url(/images/steve-payne-XyaR7Fu7x9w-unsplash.jpg)
-        no-repeat 50% / cover;
-    }
-    &:nth-of-type(3) {
-      background: url(/images/xtina-yu-mf94VWJlMwU-unsplash.jpg)
-        no-repeat 50% / cover;
-    }
-    &:nth-of-type(4) {
-      background: url(/images/diana-parkhouse-ERB4MTXEkbo-unsplash.jpg)
-        no-repeat 50% / cover;
-    }
+.carousel_inner ::after{
+  content: "";
+  display:block;
+  clear:both;
+}
 
-    .content {
-      font-size: 1.5rem;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      padding: 15px;
-      opacity: 0;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-end;
-      background: rgb(2, 2, 46);
-      background: linear-gradient(
-        0deg,
-        rgba(2, 2, 46, 0.6755077030812324) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      transform: translatey(100%);
-      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
-      visibility: hidden;
+.carousel_img{
+  display:block;
+  width:100%;
+}
 
-      span {
-        display: block;
-        margin-top: 5px;
-        font-size: 1.2rem;
-      }
-    }
+.carousel_item{
+  position:relative;
+  float:left;
+  width:100%;
+  display:none;
+  margin-right: -100%;
+}
 
-    &:hover {
-      flex: 0 0 250px;
-      box-shadow: 1px 3px 15px #7645d8;
-      transform: translatey(-30px);
-    }
+.carousel_item_active{
+  display:block;
+}
 
-    &:hover .content {
-      opacity: 1;
-      transform: translatey(0%);
-      visibility: visible;
-    }
-  }
+.carousel_item_pos_next{
+  left:100%;
+}
+
+.carousel_item_next{
+  transform:translateX (-100%);
+  transition: transform .5s ease-in-out;
 }
 
   

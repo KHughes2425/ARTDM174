@@ -1,34 +1,29 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function autoSlide(){
+  setInterval(() =>{
+    slide(getItemActiveIndex() + 1);
+  }, 1000);
 }
 
+function slide(toIndex){
+  const itemsArray = Array.from(document.querySelectorAll(".carousel_item"));
+  const itemsActive = document.querySelector(".carousel_item_active");
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  if (toIndex > itemsArray.length){
+    toIndex = 0;
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+const newItemsActive = itemsArray[toIndex];
+
+newItemsActive.classList.add("carousel_item_pos_next");
+setTimerout(() => {
+  newItemActive.classList.add("carousel_item_pos_next");
+  itemActive.classList.add("carousel_item_pos_next");
+}, 20);
+
+function getItemActiveIndex(){
+  const itemsArray = Array.from(document,querySelectorAll(".carousel_item"));
+  const itemActive = document.querySelector(".carousel_item_active");
+  const itemActiveIndex = itemsArray.indexOf(itemActive);
+  return itemsActiveIndex;
+}
