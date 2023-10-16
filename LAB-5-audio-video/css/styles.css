@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(255, 142, 170);
+}
+
+hr {
+    margin: 3rem 0;
+}
+
+.leverage{
+    width:60%;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+h2{
+    background-color: pink;
+    border-radius: 50px;
+    padding:8px;
+    border: 2px solid black;
+    width: 40%;
+}
+
+audio{
+    border: 3px solid black;
+    border-radius: 50px;
+}
+
+/*Css for Index.html*/
+
+#btn{
+    padding:10px;
+    border-radius:50px;
+    
+}
+
+a{
+    text-decoration: none;
+    font-size:1.5rem;
+}
+
+#Dif{
+    background-color:rgb(66, 0, 47);
+}
