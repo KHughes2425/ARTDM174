@@ -1,52 +1,62 @@
-document.addEventListener("DOMContentLoaded", init);
+const subtitles = document.getElementBytrId("subtitles")
+for(let i = 0; i < VideoColorSpace.textTracks; i++){
+    video.textTracks[i].mode = "hidden";
+}
 
-function init() {
-    /*Constants*/
-    const lowRider = document.querySelector(".low-rider");
-    const leverage = document.querySelector(".leverage");
-    const ff = document.getElementById("ff");
-    const slo = document.getElementById("slo");
-    const normal = document.getElementById("normal");
-    const pick = document.getElementById("pick");
+let subtitlesMenu;
+if (video.textTracks) {
+  const df = document.createDocumentFragment();
+  const subtitlesMenu = df.appendChild(document.createElement("ul"));
+  subtitlesMenu.className = "subtitles-menu";
+  subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
+  for (let i = 0; i < video.textTracks.length; i++) {
+    subtitlesMenu.appendChild(
+      createMenuItem(
+        `subtitles-${video.textTracks[i].language}`,
+        video.textTracks[i].language,
+        video.textTracks[i].label,
+      ),
+    );
+  }
+  videoContainer.appendChild(subtitlesMenu);
+}
 
-    /**
-     * prepare the audio and video for playing
-     */
-    lowRider.src = "audio/audio.mp3";
-    lowRider.load();
-    lowRider.volume = 0.5;
-
-    //set video's initial volume
-    leverage.volume = 0.5;
-
-    /**
-     * create the button event listeners to control the audio
-     */
-
-    ff.addEventListener("click", (e) => {
-        lowRider.playbackRate = 2;
+const subtitleMenuButtons = [];
+function createMenuItem(id, lang, label) {
+  const listItem = document.createElement("li");
+  const button = listItem.appendChild(document.createElement("button"));
+  button.setAttribute("id", id);
+  button.className = "subtitles-button";
+  if (lang.length > 0) button.setAttribute("lang", lang);
+  button.value = label;
+  button.setAttribute("data-state", "inactive");
+  button.appendChild(document.createTextNode(label));
+  button.addEventListener("click", (e) => {
+    // Set all buttons to inactive
+    subtitleMenuButtons.forEach((button) => {
+      button.setAttribute("data-state", "inactive");
     });
 
-    slo.addEventListener("click", (e) => {
-        lowRider.playbackRate = 0.5;
-    });
+    // Find the language to activate
+    const lang = button.getAttribute("lang");
+    for (let i = 0; i < video.textTracks.length; i++) {
+      // For the 'subtitles-off' button, the first condition will never match so all will subtitles be turned off
+      if (video.textTracks[i].language === lang) {
+        video.textTracks[i].mode = "showing";
+        button.setAttribute("data-state", "active");
+      } else {
+        video.textTracks[i].mode = "hidden";
+      }
+    }
+    subtitlesMenu.style.display = "none";
+  });
+  subtitleMenuButtons.push(button);
+  return listItem;
+}
 
-    normal.addEventListener("click", (e) => {
-        lowRider.playbackRate = 1;
-    });
-
-    /**
-     * select lists emit a "change" event when the choice is changed
-     */
-    pick.addEventListener("change", (e) => {
-        // save the audio's current place in the song.
-        let time = lowRider.currentTime;
-
-        lowRider.src = e.target.value;
-        lowRider.load();
-        lowRider.play();
-
-        // set the new song to the same place as the previous one.
-        lowRider.currentTime = time;
-    });
-} // end init function
+subtitles.addEventListener("click", (e) => {
+    if (subtitlesMenu) {
+      subtitlesMenu.style.display =
+        subtitlesMenu.style.display === "block" ? "none" : "block";
+    }
+  });
