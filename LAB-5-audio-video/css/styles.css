@@ -1,70 +1,8 @@
-
-
-
-body{
-    background-color: rgb(255, 142, 170);
-}
-
-hr {
-    margin: 3rem 0;
-}
-
-.leverage{
-    width:60%;
-    border: 3px solid rgb(0, 0, 0);
-}
-
-h2{
-    background-color: pink;
-    border-radius: 50px;
-    padding:8px;
-    border: 2px solid black;
-    width: 40%;
-    font-family: 'Pangolin', cursive;
-}
-
-audio{
-    border: 3px solid black;
-    border-radius: 50px;
-    background-color:paleturquoise;
-}
-
-/*Css for Index.html*/
-
-#btn{
-    padding:10px;
-    border-radius:50px;
-    margin: 0 auto;
-    max-width: 50%;
-    min-width: 50%;
-    
-}
-
-a{
-    text-decoration: none;
-    font-size:1.5rem;
-    color:black;
-    font-family: 'Pangolin', cursive;
-}
-
-#Dif{
-    background-color:rgb(66, 0, 47);
-}
-
-.head{
-    padding:12px;
-    font-size:1.5rem;
-    text-align:center;
-}
-
-.color{
-    text-align: center;
-}
-
-.color{
-    color:snow;
-}
-
-h1{
-    font-family: 'Pangolin', cursive;
+.controls button[data-state="subtitles"]{
+    height:85%;
+    text-indent: 0;
+    font-size: 16px;
+    font-weight: bold;
+    background:#000;
+    border-radius:2px;
 }

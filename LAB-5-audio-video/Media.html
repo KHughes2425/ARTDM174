@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Lab 5</title>
-        <link rel="stylesheet" href="css/styles.css" />
-        <script src="java/java.js" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Media Player</h1>
-
-        <h2>Audio with custom controls</h2>
-        <br>
-        <audio class="low-rider" controls>
-            <source src="videos/video.mp4" type="audio/webm" />
-            <source src="audio/audio.mp3" type="audio/mp3" />
-            <p>
-                Here is a link to the audio file itself
-                <a href="audio/audio.mp3">Audio here</a>
-            </p>
-            <br>
-        </audio>
-        <div class="audio-controls">
-            <button id="ff">ff</button>
-            <button id="slo">slow motion</button>
-            <button id="normal">normal</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Media Player</title>
+</head>
+<body>
+    <video id="video">
+        <source src="/videos/I Edited-CoryxKenshin-Video-because-I’m-obese.webm" type="video/webm">
+        <source src="/videos/video.mp4" type="video/mp4">
+        <track
+            label="English"
+            kind="subtitles"
+            srclang="en"
+            src="" default/>
+    </video>
+    <div id="video-controls" class="controls" data-state="hidden">
+        <button id="play/Pause" type="button" data-state="play">Play/Pause</button>
+        <button id="stop" type="button" data-state="stop">Stop</button>
+        <div class="progess">
+            <progress id="progress" value="0" min="0">
+                <span id="progress-bar"></span>
+            </progress>
         </div>
-
-        <hr />
-
-        <h2>A short Edit I made for Youtube 2 years ago! </h2>
-        <br>
-        <video class="leverage" controls autoplay>
-            <source src="videos/video.mp4" type="video/mp4" />
-            <source src="videos/I Edited-CoryxKenshin-Video-because-I’m-obese.webm" type="video/webm" />
-            <p>
-                Here is a link to the video file itself
-                <a href="videos/video.mp4">Video here</a>
-            </p>
-        </video>
-    </body>
+        <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+        <button id="volinc" type="button" data-state="volup">Vol+</button>
+        <button id="voldec" type="button" data-state="voldown">Vol-</button>
+        <button id="fs" type="button" data-state="gp-fullscreen">Fullscreen</button>
+        <button id="subs" type="button" data-state="subtitles">CC</button>
+    </div>
+    <script src="java/java.js"></script>
+</body>
 </html>
