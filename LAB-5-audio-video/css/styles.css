@@ -1,3 +1,6 @@
+
+
+
 body{
     background-color: rgb(255, 142, 170);
 }
@@ -17,11 +20,13 @@ h2{
     padding:8px;
     border: 2px solid black;
     width: 40%;
+    font-family: 'Pangolin', cursive;
 }
 
 audio{
     border: 3px solid black;
     border-radius: 50px;
+    background-color:paleturquoise;
 }
 
 /*Css for Index.html*/
@@ -29,14 +34,37 @@ audio{
 #btn{
     padding:10px;
     border-radius:50px;
+    margin: 0 auto;
+    max-width: 50%;
+    min-width: 50%;
     
 }
 
 a{
     text-decoration: none;
     font-size:1.5rem;
+    color:black;
+    font-family: 'Pangolin', cursive;
 }
 
 #Dif{
     background-color:rgb(66, 0, 47);
+}
+
+.head{
+    padding:12px;
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.color{
+    text-align: center;
+}
+
+.color{
+    color:snow;
+}
+
+h1{
+    font-family: 'Pangolin', cursive;
 }

@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    /**
-     * Shortcut variables
-     */
+    /*Constants*/
     const lowRider = document.querySelector(".low-rider");
     const leverage = document.querySelector(".leverage");
     const ff = document.getElementById("ff");
