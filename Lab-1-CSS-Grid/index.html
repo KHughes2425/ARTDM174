@@ -1,81 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Lato:wght@700&family=Pacifico&display=swap" rel="stylesheet">
-    <title>CSS Grid Layout</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="h1-logo">
-            <img class="logo" src="images/yes.jpg" alt="pink cupcakes">
-            <h1>The Wonderful World of Flex Box Design</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    
-    <main>
-        <div class="a">
-            <img src="images/Angel.jpg" alt="fairy jungle">
-        </div>      
-            <div class="b">
-                <img src="images/city.jpg" alt="Clouds">
-            </div>
-            <div class="c">
-                <img src="images/cloud.jpg" alt="Ai Photos">
-            </div>
-            <div class="d">
-                <img src="images/cyber.jpg" alt="Fairies">
-            </div>
-        
-        <div class="e">
-            <img src="images/forest.jpg" alt="rainbow city in the clouds">
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab 5</title>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <script src="java/java.js" defer></script>
+    </head>
+    <body>
+        <h1>Rich Media Demo</h1>
 
-        
-
-        <section class="f">
-            <h2> CSS Grid Layout</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, 
-                nulla consequuntur perspiciatis et unde, a est fugit tempore officia ducimus 
-                ullam hic non tempora sequi ex aperiam voluptatibus animi minus!
+        <h2>Audio with custom controls</h2>
+        <audio class="low-rider" controls>
+            <source src="audio/audio.mp3" type="audio/mp3" />
+            <p>
+                Here is a link to the audio file itself
+                <a href="audio/audio.mp3">Audio here</a>
             </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem exercitationem beatae recusandae 
-                voluptas eveniet non tempore odit dignissimos, quo ea ad expedita neque, quisquam voluptate hic 
-                eligendi sed iure voluptatum natus nobis architecto excepturi, velit in dolor. Ipsum, perspiciatis iste.
+        </audio>
+        <div class="audio-controls">
+            <button id="ff">ff</button>
+            <button id="slo">slow mo</button>
+            <button id="normal">normal</button>
+            <select name="pick" id="pick">
+                <option value="">pick a song</option>
+                <option value="audio/audio.mp3">Low Rider</option>
+                <option value="a/money.mp3">Money</option>
+            </select>
+        </div>
+
+        <hr />
+
+        <h2>Basic Video</h2>
+        <video class="leverage" controls>
+            <source src="videos/video.webm" type="video/webm" />
+            <source src="videos/video.mp4" type="video/mp4" />
+			<track
+				kind="captions"
+				src="captions/video.vtt"
+				srclang="en"
+				label="on" 
+				default/>
+            <p>
+                Here is a link to the video file itself
+                <a href="videos/video.mp4">Video here</a>
             </p>
-        </section>
-
-        <div class="g">
-            <img src="images/fruit.jpg" alt="Rainbow city">
-        </div>
-        <div class="h">
-            <img src="images/rainbow.jpg" alt="mushroom city">
-        </div>
-        <div class="i">
-            <img src="images/shroom.jpg" alt="fairy city">
-        </div>
-        <div class="j">
-            <img src="images/sky.jpg" alt="fairy city">
-        </div>
-        <div class="k">
-            <img src="images/tree.jpg" alt="rainbow unicorn">
-        </div>
-
-        
-    </main>
-</body>
+        </video>
+    </body>
 </html>
