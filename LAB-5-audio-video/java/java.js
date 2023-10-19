@@ -11,7 +11,7 @@ function init() {
     /**
      * prepare the audio and video for playing
      */
-    lowRider.src = "audio/audio.mp3";
+    lowRider.src = "audio/Everybody Wants To Rule The World.mp3";
     lowRider.load();
     lowRider.volume = 0.5;
 
